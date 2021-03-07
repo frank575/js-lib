@@ -1,6 +1,5 @@
 /**
  * @template T
- * @template U
  * @param {T} obj
  * @return {T & {t(val: any): string, key(val: any): string}}
  */
