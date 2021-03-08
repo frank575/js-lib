@@ -1,7 +1,6 @@
 /**
- * 數字加逗號
- * @param step [number] 多少位加逗號，預設千非位
- * @return [string] 加逗號的文字
+ * 數字加逗號，step(參數2)為多少位加逗號，預設千非位
+ * @type {function(price: string | number, step: number): string}
  */
 const stepPrice = (() => {
 	const ds = {}

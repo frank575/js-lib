@@ -1,3 +1,9 @@
+/**
+ * 下載 blob File
+ * @param {*} blob
+ * @param {string} fileName
+ * @param {string} fileType
+ */
 function downloadBlob(blob, fileName, fileType) {
 	const url = window.URL.createObjectURL(new Blob([blob]))
 	const link = document.createElement('a')

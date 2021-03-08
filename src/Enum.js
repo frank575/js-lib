@@ -1,4 +1,5 @@
 /**
+ * 模擬 ts 的 enum
  * @template T
  * @param {T} obj
  * @return {T & {t(val: any): string, key(val: any): string}}

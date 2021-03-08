@@ -1,7 +1,7 @@
 /**
- * 複製文字方法
- * @param value [number | string]
- * @return [string] 拷貝的值
+ * 複製文字
+ * @param {number | string} value
+ * @return {string} 拷貝的值
  */
 function copyText(value) {
 	const copy = typeof value === 'number' ? String(value) : value
