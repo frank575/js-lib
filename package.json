@@ -19,8 +19,5 @@
   "bugs": {
     "url": "https://github.com/frank575/my-front-lib/issues"
   },
-  "homepage": "https://github.com/frank575/my-front-lib#readme",
-  "devDependencies": {
-    "prettier": "^2.2.1"
-  }
+  "homepage": "https://github.com/frank575/my-front-lib#readme"
 }
