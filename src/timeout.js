@@ -1,7 +1,7 @@
 /**
  * setTimeout 封裝
  * @template T
- * @returns {{stop: function(): void, start: function(fun: function(): void, delay: number = 0): void, startSync: function(function() :T, delay: number = 0): Promise<T>}}
+ * @returns {{stop: function(): void, start: function(fun: function(): void, delay: number = 0): void, startSync: function(function() :Promise<T>, delay: number = 0): Promise<T>}}
  */
 function timeout() {
 	let timer = null
@@ -13,10 +13,15 @@ function timeout() {
 		}
 	}
 	function startSync(promiseFun, delay = 0) {
-		return new Promise(resolve => {
+		return new Promise((resolve, reject) => {
 			if (timer == null) {
-				timer = setTimeout(() => {
-					resolve(promiseFun())
+				timer = setTimeout(async () => {
+					try {
+						resolve(await promiseFun())
+					} catch (err) {
+						console.error(err)
+						reject(err)
+					}
 				}, delay)
 			}
 		})
