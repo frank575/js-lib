@@ -15,6 +15,7 @@ import {
 	checkIncludeText,
 } from './cnTranslate'
 import vTime from './time/vanilla'
+import timeout from './timeout'
 
 export {
 	ClassName,
@@ -32,4 +33,5 @@ export {
 	checkSameChinese,
 	checkIncludeText,
 	vTime,
+	timeout,
 }
